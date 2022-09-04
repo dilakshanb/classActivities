@@ -36,6 +36,14 @@ try:
             passenger_name = record[3]
             print(f" {passenger_name}")
 
+    elif selected_option == 2:
+        num_survived=0
+        for record in records:
+            survival_status = int(record[1])
+            if survival_status == 1:
+                num_survived += 1
+        print(f"{num_survived} passengers survived")
+
 
 
 
