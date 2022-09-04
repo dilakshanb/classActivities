@@ -30,6 +30,12 @@ try:
 
     print(f"You have selected option: {selected_option}\n")
 
+    if selected_option == 1:
+        print("The names of the passengers are...")
+        for record in records:
+            passenger_name = record[3]
+            print(f" {passenger_name}")
+
 
 
 
