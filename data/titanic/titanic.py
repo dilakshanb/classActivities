@@ -70,6 +70,32 @@ try:
                     elderly += 1
         print(f"children: {children}, adults: {adults}, elderly: {elderly}")
 
+    elif selected_option == 5:
+        children = adults = elderly = 0
+        child_survivors = adult_survivors = elderly_survivors = 0
+
+        for record in records:
+            survived = int(record[1])
+            if record[5] != "":
+                age = float(record[5])
+                if age < 18:
+                    children += 1
+                    if survived == 1:
+                        child_survivors += 1
+                elif age < 65:
+                    adults += 1
+                    if survived == 1:
+                        adult_survivors += 1
+                else:
+                    elderly += 1
+                    if survived == 1:
+                        elderly_survivors += 1
+        print(
+            f"children: {child_survivors}/{children}, adults: {adult_survivors}/{adults}, elderly:{elderly_survivors} / {elderly}")
+    else:
+
+        print("invalid input")
+
 
 
 
