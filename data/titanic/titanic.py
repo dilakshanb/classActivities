@@ -44,6 +44,17 @@ try:
                 num_survived += 1
         print(f"{num_survived} passengers survived")
 
+    elif selected_option == 3:
+        females = 0
+        males = 0
+        for record in records:
+            sex = record[4]
+            if sex.lower() == "male":
+                males += 1
+            else:
+                females += 1
+        print(f"females: {females}, males: {males}")
+
 
 
 
