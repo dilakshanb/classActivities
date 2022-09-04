@@ -55,6 +55,21 @@ try:
                 females += 1
         print(f"females: {females}, males: {males}")
 
+    elif selected_option == 4:
+        children = adults = elderly = 0
+
+        for record in records:
+            survived = int(record[1])
+            if record[5] != "":
+                age = float(record[5])
+                if age < 18:
+                    children += 1
+                elif age < 65:
+                    adults += 1
+                else:
+                    elderly += 1
+        print(f"children: {children}, adults: {adults}, elderly: {elderly}")
+
 
 
 
